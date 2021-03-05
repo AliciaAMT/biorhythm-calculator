@@ -3,10 +3,17 @@ import React, { useState } from 'react';
 // import { play as playIcon } from 'ionicons/icons';
 import BiorythmCard from './components/BiorythmCard';
 
+import dayjs from 'dayjs';
+
+function formatDate(isoString) {
+  return dayjs(isoString).format('dddd - MMMM D, YYYY');
+}
+
 function App() {
   const targetDate = new Date().toISOString();
   const [name, setName] = useState('');
   const [birthdate, setBirthdate] = useState('');
+  
   // const [showToast, setShowToast] = useState(false);
   // const handleClick = () => {
   //   setShowToast(true);
@@ -22,7 +29,7 @@ function App() {
       <IonContent class="ion-padding">
       <IonCard color="dark" class="ion-padding">
         <IonCardHeader class="ion-text-center">
-          <IonCardTitle><b>Card Title</b></IonCardTitle>
+          <IonCardTitle><b>Discover Your Potential!</b></IonCardTitle>
         </IonCardHeader>
         <IonCardContent>
           <IonLabel>Name</IonLabel>
@@ -39,7 +46,7 @@ function App() {
       <BiorythmCard targetDate={targetDate} />
       <IonText color="light">
       <p>Name: {name}</p>
-      <p>Birthdate: {birthdate}</p>
+      <p>Birthdate: {formatDate(birthdate)}</p>
       </IonText>
         {/* 
         <IonButton color="primary" onClick={handleClick}>
