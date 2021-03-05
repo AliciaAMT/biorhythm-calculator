@@ -1,3 +1,7 @@
+# To Install Pretty Dates
+`$ npm install dayjs`
+
+
 # Biorhythm Calculator
 
 This example is part of the Ionic React course.
