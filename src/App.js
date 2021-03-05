@@ -43,7 +43,7 @@ function App() {
           </IonItem>
         </IonCardContent>
       </IonCard>
-      <BiorythmCard targetDate={targetDate} />
+      <BiorythmCard birthdate={birthdate} targetDate={targetDate} />
       <IonText color="light">
       <p>Name: {name}</p>
       <p>Birthdate: {formatDate(birthdate)}</p>
